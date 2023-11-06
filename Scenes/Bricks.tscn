@@ -1,0 +1,175 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2xcghhb5nvdi"]
+
+[ext_resource type="PackedScene" uid="uid://dukcq6iq7byq" path="res://Scenes/Brick.tscn" id="2_5dfyp"]
+
+[node name="Bricks" type="Node2D"]
+
+[node name="Red" type="Node2D" parent="."]
+position = Vector2(192, 64)
+
+[node name="Brick" parent="Red" instance=ExtResource("2_5dfyp")]
+level = 5
+
+[node name="Brick2" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(104, 0)
+level = 5
+
+[node name="Brick3" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(208, 0)
+level = 5
+
+[node name="Brick4" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(312, 0)
+level = 5
+
+[node name="Brick5" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(416, 0)
+level = 5
+
+[node name="Brick6" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(520, 0)
+level = 5
+
+[node name="Brick7" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(624, 0)
+level = 5
+
+[node name="Brick8" parent="Red" instance=ExtResource("2_5dfyp")]
+position = Vector2(728, 0)
+level = 5
+
+[node name="Orange" type="Node2D" parent="."]
+position = Vector2(192, 96)
+
+[node name="Brick" parent="Orange" instance=ExtResource("2_5dfyp")]
+level = 4
+
+[node name="Brick2" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(104, 0)
+level = 4
+
+[node name="Brick3" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(208, 0)
+level = 4
+
+[node name="Brick4" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(312, 0)
+level = 4
+
+[node name="Brick5" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(416, 0)
+level = 4
+
+[node name="Brick6" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(520, 0)
+level = 4
+
+[node name="Brick7" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(624, 0)
+level = 4
+
+[node name="Brick8" parent="Orange" instance=ExtResource("2_5dfyp")]
+position = Vector2(728, 0)
+level = 4
+
+[node name="Yellow" type="Node2D" parent="."]
+position = Vector2(192, 128)
+
+[node name="Brick" parent="Yellow" instance=ExtResource("2_5dfyp")]
+level = 3
+
+[node name="Brick2" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(104, 0)
+level = 3
+
+[node name="Brick3" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(208, 0)
+level = 3
+
+[node name="Brick4" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(312, 0)
+level = 3
+
+[node name="Brick5" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(416, 0)
+level = 3
+
+[node name="Brick6" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(520, 0)
+level = 3
+
+[node name="Brick7" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(624, 0)
+level = 3
+
+[node name="Brick8" parent="Yellow" instance=ExtResource("2_5dfyp")]
+position = Vector2(728, 0)
+level = 3
+
+[node name="Green" type="Node2D" parent="."]
+position = Vector2(192, 160)
+
+[node name="Brick" parent="Green" instance=ExtResource("2_5dfyp")]
+level = 2
+
+[node name="Brick2" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(104, 0)
+level = 2
+
+[node name="Brick3" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(208, 0)
+level = 2
+
+[node name="Brick4" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(312, 0)
+level = 2
+
+[node name="Brick5" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(416, 0)
+level = 2
+
+[node name="Brick6" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(520, 0)
+level = 2
+
+[node name="Brick7" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(624, 0)
+level = 2
+
+[node name="Brick8" parent="Green" instance=ExtResource("2_5dfyp")]
+position = Vector2(728, 0)
+level = 2
+
+[node name="Blue" type="Node2D" parent="."]
+position = Vector2(192, 192)
+
+[node name="Brick" parent="Blue" instance=ExtResource("2_5dfyp")]
+level = 1
+
+[node name="Brick2" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(104, 0)
+level = 1
+
+[node name="Brick3" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(208, 0)
+level = 1
+
+[node name="Brick4" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(312, 0)
+level = 1
+
+[node name="Brick5" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(416, 0)
+level = 1
+
+[node name="Brick6" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(520, 0)
+level = 1
+
+[node name="Brick7" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(624, 0)
+level = 1
+
+[node name="Brick8" parent="Blue" instance=ExtResource("2_5dfyp")]
+position = Vector2(728, 0)
+level = 1

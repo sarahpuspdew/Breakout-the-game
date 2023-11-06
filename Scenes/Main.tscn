@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0ol0hkwnta1s"]
+
+[ext_resource type="PackedScene" uid="uid://stlun7cheshb" path="res://Scenes/Paddle.tscn" id="1_s2uaj"]
+[ext_resource type="Script" path="res://Scripts/Boundary.gd" id="2_bmwng"]
+[ext_resource type="PackedScene" uid="uid://b2xcghhb5nvdi" path="res://Scenes/Bricks.tscn" id="2_rwux0"]
+[ext_resource type="PackedScene" uid="uid://c74rqefdyte1v" path="res://Scenes/Ball.tscn" id="2_ugwag"]
+[ext_resource type="PackedScene" uid="uid://cngspw6ri252m" path="res://Scenes/HUD.tscn" id="4_e71v4"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q87np"]
+b = Vector2(1152, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4rya5"]
+a = Vector2(0, -648)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hg2vl"]
+b = Vector2(1152, 0)
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+position_smoothing_enabled = true
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Top" type="StaticBody2D" parent="Walls"]
+position = Vector2(-576, -324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Top"]
+shape = SubResource("SegmentShape2D_q87np")
+
+[node name="Left" type="StaticBody2D" parent="Walls"]
+position = Vector2(-576, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Left"]
+shape = SubResource("SegmentShape2D_4rya5")
+
+[node name="Right" type="StaticBody2D" parent="Walls"]
+position = Vector2(576, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Right"]
+shape = SubResource("SegmentShape2D_4rya5")
+
+[node name="Boundary" type="Area2D" parent="."]
+position = Vector2(0, 650)
+script = ExtResource("2_bmwng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary"]
+shape = SubResource("SegmentShape2D_hg2vl")
+debug_color = Color(0.733333, 0.470588, 0.129412, 0.419608)
+
+[node name="Bricks" parent="." instance=ExtResource("2_rwux0")]
+
+[node name="Paddle" parent="." instance=ExtResource("1_s2uaj")]
+position = Vector2(576, 610)
+max_speed = 400.0
+acceleration = 150.0
+decceleration = 50.0
+
+[node name="Ball" parent="." instance=ExtResource("2_ugwag")]
+position = Vector2(576, 592)
+motion_mode = 1
+speed = 300.0
+max_speed = 400.0
+acceleration = 50.0
+
+[node name="HUD" parent="." instance=ExtResource("4_e71v4")]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[connection signal="body_entered" from="Boundary" to="Boundary" method="_on_body_entered"]
